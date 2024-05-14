@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+
+お名前:<span th:text="${creditInfo.name}"></span><br>
+カード番号:<span th:text="${creditInfo.creditNumber}"></span><br>
+限度額:<span th:text="${creditInfo.gendoGaku}"></span><br>
+使用額:<span th:text="${creditInfo.siyoGaku}"></span><br>
+<img src="/images/image1.jpg" alt="Image1">
+<img src="/images/html.png" alt="HTML Image"><br>
+<form id="paymentForm" method="post" action="/creditNumber/price">
+<!--    <input type="hidden" name="creditNumber" th:value="${creditInfo.creditNumber}" />-->
+<!--    <input type="hidden" name="price" th:value="${500}" />-->
+    <input type="submit" value="Click me" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
+</form>
+</body>
+</html>
