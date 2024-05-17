@@ -10,12 +10,16 @@
 カード番号:<span th:text="${creditInfo.creditNumber}"></span><br>
 限度額:<span th:text="${creditInfo.gendoGaku}"></span><br>
 使用額:<span th:text="${creditInfo.siyoGaku}"></span><br>
-<img src="/images/image1.jpg" alt="Image1">
-<img src="/images/html.png" alt="HTML Image"><br>
-<form id="paymentForm" method="post" action="/creditNumber/price">
+
+<div>
+<img src="/images/image1.jpg">1000円<a th:href="@{/payment/proc(card=${creditInfo.creditNumber}, price=1000)}">購入</a><br>
+    <img src="/images/1.jpg">500円<a href="/payment/1000">購入</a><br>
+<img src="/images/html.png">2000円<br>
+<form id="paymentForm" method="post" action="/creditInfo.creditNumber/price">
 <!--    <input type="hidden" name="creditNumber" th:value="${creditInfo.creditNumber}" />-->
 <!--    <input type="hidden" name="price" th:value="${500}" />-->
-    <input type="submit" value="Click me" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <input type="submit" value="購入" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
 </form>
+</div>
 </body>
 </html>
